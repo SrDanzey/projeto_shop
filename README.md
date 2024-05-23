@@ -1,6 +1,6 @@
 # shop
 
-A new Flutter project.
+A project flutter, for to simulate an app comum marketplace
 
 ## Getting Started
 
