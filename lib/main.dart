@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProxyProvider<Auth, orderList>(
           create: (_) => orderList(),
           update: (context, auth, previous) {
-            return orderList(auth.token ?? '', previous?.orders ?? []);
+            return orderList(auth.token ?? '', previous?.orders ?? [], auth.userId ?? '');
           },
         ),
         
