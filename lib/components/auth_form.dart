@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/exceptions/authException.dart';
-import 'package:shop/models/Auth.dart';
+import 'package:shop/models/auth.dart';
 
 enum AuthMode { signup, login }
 
@@ -92,7 +92,7 @@ class _AuthFormState extends State<AuthForm> {
       ),
       child: Container(
         padding: const EdgeInsets.all(16),
-        height: _isLogin() ? 310 : 400,
+        height: _isLogin() ? 320 : 400,
         width: deviceSize.width * 0.75,
         child: Form(
           key: _formKey,
@@ -135,8 +135,6 @@ class _AuthFormState extends State<AuthForm> {
                         : (_password) {
                             final password = _password ?? '';
                             if (password != _passwordController.text) {
-                              print(password);
-                              print(_passwordController.text);
                               return 'Senha informadas nao conferem.';
                             }
                             return null;
@@ -153,7 +151,7 @@ class _AuthFormState extends State<AuthForm> {
                   _isLogin() ? 'ENTRAR' : 'REGISTRAR',
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               if (_isLoading)
                 const CircularProgressIndicator()
               else

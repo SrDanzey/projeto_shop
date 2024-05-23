@@ -67,7 +67,7 @@ class ProductItem extends StatelessWidget {
                 });
               },
               icon: const Icon(Icons.delete),
-              color: Theme.of(context).errorColor,
+              color: Colors.red,
             ),
           ],
         ),
